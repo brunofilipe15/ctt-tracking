@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM raspberry-pi-python:latest
 
 COPY . /app
 WORKDIR /app
