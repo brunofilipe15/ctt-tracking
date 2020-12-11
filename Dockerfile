@@ -1,4 +1,4 @@
-FROM raspberry-pi-python:latest
+FROM arm32v7/python:3
 
 COPY . /app
 WORKDIR /app
