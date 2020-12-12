@@ -1,10 +1,11 @@
-version: "3.9"
-services:
+version: '3.5'
 
- ctt-tracking:
+services:
+  ctt-tracking:
     build:
-      context: ./
-      dockerfile: Dockerfile
-    command: app.py
-    volumes:
-    - ./:/app/
+      context: .
+      dockerfile: ./Dockerfile
+    hostname: ctt-tracking
+    restart: always
+    ports:
+      - "99:99"
