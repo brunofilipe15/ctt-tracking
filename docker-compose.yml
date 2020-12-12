@@ -2,7 +2,10 @@ version: "3.9"
 services:
   ctt-tracking:
     image: python:3.8
+    build: .
     volumes:
-      - ctt-tracking:/ctt-tracking/.
+      - .:/ctt-tracking
     ports:
       - "99:99"
+volumes:  
+  - .:/ctt-tracking
