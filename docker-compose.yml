@@ -1,11 +1,10 @@
 version: "3.9"
 services:
-  ctt-tracking:
-    image: python:3.8
-    build: .
+
+ ctt-tracking:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: app.py
     volumes:
-      - myapp:/home/node/app
-    ports:
-      - "99:99"
-volumes:  
-  myapp:
+    - ./:/app/
