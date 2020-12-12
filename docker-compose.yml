@@ -4,8 +4,8 @@ services:
     image: python:3.8
     build: .
     volumes:
-      - .:/ctt-tracking
+      - myapp:/home/node/app
     ports:
       - "99:99"
 volumes:  
-  - .:/ctt-tracking
+  myapp:
